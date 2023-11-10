@@ -62,12 +62,19 @@ namespace Convert_Degrees_to_Decimal
                 {
                     data = dgv_data[j, i].Value.ToString();
 
+                    
+
                     if (data != "")
                     {
-                       dgv_data[j + 2, i].Value = 
+                        dgv_data[j + 2, i].Value = 
                            Math.Round(decimal.Parse(data.Split('°', '\'')[0]) +
                                       (decimal.Parse(data.Split('°', '\'')[1]) / 60) +
                                       (decimal.Parse(data.Split('\'', '"')[1]) / 3600), 5).ToString();
+
+                        if (data.Split('\'', '"')[2] == "W") //west of meridian
+                        {
+                            dgv_data[j + 2, i].Value = (decimal.Parse(dgv_data[j + 2, i].Value.ToString()) *(- 1)).ToString();
+                        }
                     }
                 }
             }
