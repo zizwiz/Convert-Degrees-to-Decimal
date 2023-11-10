@@ -85,5 +85,6 @@
   <ItemGroup>
     <Content Include="globe.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

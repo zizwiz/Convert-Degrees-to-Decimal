@@ -35,32 +35,32 @@ namespace Convert_Degrees_to_Decimal
             this.btn_convert = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tab_data = new System.Windows.Forms.TabPage();
+            this.dgv_data = new System.Windows.Forms.DataGridView();
+            this.LatDeg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LongDeg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LatDec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LongDec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tab_spare = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.btn_save = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tab_data = new System.Windows.Forms.TabPage();
-            this.tab_spare = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.LatDeg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LongDeg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LatDec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LongDec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tab_data.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tab_data.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_close
@@ -119,6 +119,80 @@ namespace Convert_Degrees_to_Decimal
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1053, 629);
             this.panel1.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tab_data);
+            this.tabControl1.Controls.Add(this.tab_spare);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1053, 629);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tab_data
+            // 
+            this.tab_data.Controls.Add(this.dgv_data);
+            this.tab_data.Location = new System.Drawing.Point(4, 29);
+            this.tab_data.Name = "tab_data";
+            this.tab_data.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_data.Size = new System.Drawing.Size(1045, 596);
+            this.tab_data.TabIndex = 0;
+            this.tab_data.Text = "Data";
+            this.tab_data.UseVisualStyleBackColor = true;
+            // 
+            // dgv_data
+            // 
+            this.dgv_data.AllowUserToAddRows = false;
+            this.dgv_data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.LatDeg,
+            this.LongDeg,
+            this.LatDec,
+            this.LongDec});
+            this.dgv_data.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_data.Location = new System.Drawing.Point(3, 3);
+            this.dgv_data.Name = "dgv_data";
+            this.dgv_data.RowHeadersWidth = 62;
+            this.dgv_data.RowTemplate.Height = 28;
+            this.dgv_data.Size = new System.Drawing.Size(1039, 590);
+            this.dgv_data.TabIndex = 0;
+            // 
+            // LatDeg
+            // 
+            this.LatDeg.HeaderText = "Lat Deg";
+            this.LatDeg.MinimumWidth = 8;
+            this.LatDeg.Name = "LatDeg";
+            // 
+            // LongDeg
+            // 
+            this.LongDeg.HeaderText = "Long Deg";
+            this.LongDeg.MinimumWidth = 8;
+            this.LongDeg.Name = "LongDeg";
+            // 
+            // LatDec
+            // 
+            this.LatDec.HeaderText = "Lat Dec";
+            this.LatDec.MinimumWidth = 8;
+            this.LatDec.Name = "LatDec";
+            // 
+            // LongDec
+            // 
+            this.LongDec.HeaderText = "Long Dec";
+            this.LongDec.MinimumWidth = 8;
+            this.LongDec.Name = "LongDec";
+            // 
+            // tab_spare
+            // 
+            this.tab_spare.Location = new System.Drawing.Point(4, 29);
+            this.tab_spare.Name = "tab_spare";
+            this.tab_spare.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_spare.Size = new System.Drawing.Size(1045, 596);
+            this.tab_spare.TabIndex = 1;
+            this.tab_spare.Text = "Spare";
+            this.tab_spare.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -180,15 +254,6 @@ namespace Convert_Degrees_to_Decimal
             this.panel5.Size = new System.Drawing.Size(244, 48);
             this.panel5.TabIndex = 2;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btn_close);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(793, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(244, 48);
-            this.panel6.TabIndex = 3;
-            // 
             // btn_save
             // 
             this.btn_save.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -200,81 +265,14 @@ namespace Convert_Degrees_to_Decimal
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // tabControl1
+            // panel6
             // 
-            this.tabControl1.Controls.Add(this.tab_data);
-            this.tabControl1.Controls.Add(this.tab_spare);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1053, 629);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tab_data
-            // 
-            this.tab_data.Controls.Add(this.dataGridView1);
-            this.tab_data.Location = new System.Drawing.Point(4, 29);
-            this.tab_data.Name = "tab_data";
-            this.tab_data.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_data.Size = new System.Drawing.Size(1045, 596);
-            this.tab_data.TabIndex = 0;
-            this.tab_data.Text = "Data";
-            this.tab_data.UseVisualStyleBackColor = true;
-            // 
-            // tab_spare
-            // 
-            this.tab_spare.Location = new System.Drawing.Point(4, 29);
-            this.tab_spare.Name = "tab_spare";
-            this.tab_spare.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_spare.Size = new System.Drawing.Size(1045, 596);
-            this.tab_spare.TabIndex = 1;
-            this.tab_spare.Text = "Spare";
-            this.tab_spare.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LatDeg,
-            this.LongDeg,
-            this.LatDec,
-            this.LongDec});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1039, 590);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // LatDeg
-            // 
-            this.LatDeg.HeaderText = "Lat Deg";
-            this.LatDeg.MinimumWidth = 8;
-            this.LatDeg.Name = "LatDeg";
-            this.LatDeg.Width = 150;
-            // 
-            // LongDeg
-            // 
-            this.LongDeg.HeaderText = "Long Deg";
-            this.LongDeg.MinimumWidth = 8;
-            this.LongDeg.Name = "LongDeg";
-            this.LongDeg.Width = 150;
-            // 
-            // LatDec
-            // 
-            this.LatDec.HeaderText = "Lat Dec";
-            this.LatDec.MinimumWidth = 8;
-            this.LatDec.Name = "LatDec";
-            this.LatDec.Width = 150;
-            // 
-            // LongDec
-            // 
-            this.LongDec.HeaderText = "Long Dec";
-            this.LongDec.MinimumWidth = 8;
-            this.LongDec.Name = "LongDec";
-            this.LongDec.Width = 150;
+            this.panel6.Controls.Add(this.btn_close);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(793, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(244, 48);
+            this.panel6.TabIndex = 3;
             // 
             // Form1
             // 
@@ -288,15 +286,15 @@ namespace Convert_Degrees_to_Decimal
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tab_data.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tab_data.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,7 +308,7 @@ namespace Convert_Degrees_to_Decimal
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tab_data;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn LatDeg;
         private System.Windows.Forms.DataGridViewTextBoxColumn LongDeg;
         private System.Windows.Forms.DataGridViewTextBoxColumn LatDec;
